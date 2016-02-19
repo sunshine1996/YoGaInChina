@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">YoGaInChina</string>
+    <string name="goto_camera">goto camera</string>
+    <string name="goto_gallery">goto gallery</string>
+</resources>
