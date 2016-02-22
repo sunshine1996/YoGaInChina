@@ -22,11 +22,26 @@ public class Tools {
         Toast.makeText(context,value,Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * 判断String 是否是空
+     * @param value
+     * @return
+     */
     public static boolean isNull(String value){
         if(value==null|| value.isEmpty()||value.equals("null")||value.equals("")){
             return true;
         }else
             return false;
     }
+
+    /**
+     * 判断object是否为空
+     * @param object
+     * @return
+     */
+    public static boolean isNull(Object object){
+        return object==null;
+    }
+
 	
 }

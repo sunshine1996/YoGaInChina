@@ -3,6 +3,8 @@ package com.yoga.china.yogainchina;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,8 +26,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getImageUtil = new GetImageUtil(this);
         tv = (TextView) findViewById(R.id.tv);
+        setTitle("< Hello World!");
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+        
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_camera:
+                gotoCamera(null);
+                break;
+            case R.id.menu_gallery:
+                gotoGallery(null);
+                break;
+        }
+        return true;
+    }
 
     public void gotoCamera(View view) {
         Tools.showToast(this, "gotoCamera");
