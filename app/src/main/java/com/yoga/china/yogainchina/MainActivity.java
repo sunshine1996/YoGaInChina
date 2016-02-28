@@ -3,6 +3,7 @@ package com.yoga.china.yogainchina;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,12 +24,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.ac_main);
+        Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         getImageUtil = new GetImageUtil(this);
-        tv = (TextView) findViewById(R.id.tv);
-        setTitle("< Hello World!");
-        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
-        
+        setTitle(R.string.app_name);
     }
 
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void gotoCamera(View view) {
         Tools.showToast(this, "gotoCamera");
-        getImageUtil.getPhoto(GetImageUtil.GOTO_CAMERA);
+//        getImageUtil.getPhoto(GetImageUtil.GOTO_CAMERA);
     }
 
     public void gotoGallery(View view) {

@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Created by sunsiyuan on 16/2/18.
  */
-public class ImageUtils {
+class ImageUtils {
 
     /**
      * 读取图片属性：旋转的角度
